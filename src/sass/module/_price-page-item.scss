@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.price-page-item__box {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price-page-item {
+  @include mq("md") {
+    display: flex;
+  }
+}
+
