@@ -121,7 +121,7 @@
                 </li>
                 <li class="drawer-menu__item">
                   <a href="contact-page.html" class="drawer-menu__link-sub">
-                    <p class="drawer__logo-text">お問い</p>
+                    <p class="drawer__logo-text">お問い合わせ</p>
                   </a>
                 </li>
               </ul>
