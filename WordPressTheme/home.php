@@ -27,7 +27,7 @@
     <div class="blog-page__container blog-page-container">
       <div class="blog-page-container__left">
         <div class="blog-page-container__cards blog-page-cards">
-          <a href="blog-page-detail.html" class="blog-page-cards__item-box blog-card">
+          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
             <div class="blog-card__item">
               <div class="blog-card__img">
                 <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img2.jpg"
@@ -41,7 +41,7 @@
               </div>
             </div>
           </a>
-          <a href="blog-page-detail.html" class="blog-page-cards__item-box blog-card">
+          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
             <div class="blog-card__item">
               <div class="blog-card__img">
                 <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img3.jpg" alt="ウミガメが海中を優雅に泳いでいる様子" />
@@ -68,7 +68,7 @@
               </div>
             </div>
           </a>
-          <a href="blog-page-detail.html" class="blog-page-cards__item-box blog-card">
+          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
             <div class="blog-card__item">
               <div class="blog-card__img">
                 <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img5.jpg" alt="1匹の黄色い魚が泳いでいる様子" />
