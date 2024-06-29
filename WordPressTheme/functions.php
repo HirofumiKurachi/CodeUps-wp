@@ -68,6 +68,25 @@ function my_theme_enqueue_styles_and_scripts() {
         filemtime(get_theme_file_path('/assets/js/script.js')),
         true
     );
+
+    //アイキャッチ等の設定
+function my_setup()
+{
+    add_theme_support('post-thumbnails'); // アイキャッチ /
+    add_theme_support('automatic-feed-links'); // RSSフィード /
+    add_theme_support('title-tag'); // タイトルタグ自動生成 /
+    add_theme_support(
+        'html5',
+        array( //HTML5のタグで出力 */
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+        )
+    );
+}
+add_action('after_setup_theme', 'my_setup');
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles_and_scripts');
 ?>
