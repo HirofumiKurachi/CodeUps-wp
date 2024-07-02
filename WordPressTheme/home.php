@@ -27,139 +27,25 @@
     <div class="blog-page__container blog-page-container">
       <div class="blog-page-container__left">
         <div class="blog-page-container__cards blog-page-cards">
+          <!-- ループ処理開始 -->
+          <?php if (have_posts()):
+      while (have_posts()): the_post(); ?>
           <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
             <div class="blog-card__item">
               <div class="blog-card__img">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img2.jpg"
-                  alt="海底にカラフルなイソギンチャクが生えている様子" />
+                <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像画像" />
               </div>
               <div class="blog-card__body">
-                <time class="blog-card__date" datetime="2022-11-17">2023.11/17</time>
-                <h3 class="blog-card__text">ライセンス取得</h3>
+                <time class="blog-card__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m/d'); ?></time>
+                <h3 class="blog-card__text"><?php the_title(); ?></h3>
                 <p class="blog-card__text-sub">
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
               </div>
             </div>
           </a>
-          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
-            <div class="blog-card__item">
-              <div class="blog-card__img">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img3.jpg" alt="ウミガメが海中を優雅に泳いでいる様子" />
-              </div>
-              <div class="blog-card__body">
-                <time class="blog-card__date" datetime="2022-11-23">2023.11/17</time>
-                <h3 class="blog-card__text">ウミガメと泳ぐ</h3>
-                <p class="blog-card__text-sub">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </div>
-          </a>
-          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
-            <div class="blog-card__item">
-              <div class="blog-card__img">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img4.jpg"
-                  alt="イソギンチャクの間にカクレクマノミが隠れている様子" />
-              </div>
-              <div class="blog-card__body">
-                <time class="blog-card__date" datetime="2022-11-23">2023.11/17</time>
-                <h3 class="blog-card__text">カクレクマノミ</h3>
-                <p class="blog-card__text-sub">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </div>
-          </a>
-          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
-            <div class="blog-card__item">
-              <div class="blog-card__img">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img5.jpg" alt="1匹の黄色い魚が泳いでいる様子" />
-              </div>
-              <div class="blog-card__body">
-                <time class="blog-card__date" datetime="2022-11-23">2023.11/17</time>
-                <h3 class="blog-card__text">ライセンス取得</h3>
-                <p class="blog-card__text-sub">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </div>
-          </a>
-          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
-            <div class="blog-card__item">
-              <div class="blog-card__img">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img6.jpg" alt="白黒のイソギンチャクが砂の上に様子" />
-              </div>
-              <div class="blog-card__body">
-                <time class="blog-card__date" datetime="2022-11-23">2023.11/17</time>
-                <h3 class="blog-card__text">ウミガメと泳ぐ</h3>
-                <p class="blog-card__text-sub">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </div>
-          </a>
-          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
-            <div class="blog-card__item">
-              <div class="blog-card__img">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign-img3.jpg" alt="クラゲが泳いでいる様子" />
-              </div>
-              <div class="blog-card__body">
-                <time class="blog-card__date" datetime="2022-11-23">2023.11/17</time>
-                <h3 class="blog-card__text">カクレクマノミ</h3>
-                <p class="blog-card__text-sub">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </div>
-          </a>
-          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
-            <div class="blog-card__item">
-              <div class="blog-card__img">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img4.jpg"
-                  alt="イソギンチャクの間にカクレクマノミが隠れている様子" />
-              </div>
-              <div class="blog-card__body">
-                <time class="blog-card__date" datetime="2022-11-23">2023.11/17</time>
-                <h3 class="blog-card__text">カクレクマノミ</h3>
-                <p class="blog-card__text-sub">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </div>
-          </a>
-          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
-            <div class="blog-card__item">
-              <div class="blog-card__img">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img5.jpg" alt="1匹の黄色い魚が泳いでいる様子" />
-              </div>
-              <div class="blog-card__body">
-                <time class="blog-card__date" datetime="2022-11-23">2023.11/17</time>
-                <h3 class="blog-card__text">ライセンス取得</h3>
-                <p class="blog-card__text-sub">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </div>
-          </a>
-          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
-            <div class="blog-card__item">
-              <div class="blog-card__img">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img6.jpg" alt="白黒のイソギンチャクが砂の上に様子" />
-              </div>
-              <div class="blog-card__body">
-                <time class="blog-card__date" datetime="2022-11-23">2023.11/17</time>
-                <h3 class="blog-card__text">ウミガメと泳ぐ</h3>
-                <p class="blog-card__text-sub">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </div>
-          </a>
-          <a href="blog-page-detail.html" class="blog-cards__item-box blog-card">
-            <div class="blog-card__item">
-              <div class="blog-card__img">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign-img3.jpg" alt="クラゲが泳いでいる様子" />
-              </div>
-              <div class="blog-card__body">
-                <time class="blog-card__date" datetime="2022-11-23">2023.11/17</time>
-                <h3 class="blog-card__text">カクレクマノミ</h3>
-                <p class="blog-card__text-sub">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </div>
-          </a>
+          <!-- ループ終了 -->
+          <?php endwhile; endif; ?>
+
         </div>
         <div class="pagination-blog pagination-blog-top">
           <div class="pagination-blog__inner inner">

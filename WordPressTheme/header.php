@@ -29,7 +29,7 @@
             <a class="header__link" href="information-page.html"><span>Information</span>ダイビング情報</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="blog-page.html"><span>Blog</span>ブログ</a>
+            <a class="header__link" href="<?php echo esc_url(home_url('/')); ?>blog"><span>Blog</span>ブログ</a>
           </li>
           <li class="header__item">
             <a class="header__link" href="voice-page.html"><span>Voice</span>お客様の声</a>
