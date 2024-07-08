@@ -18,7 +18,10 @@
     <span>
       <a href="./"><span>TOP</span></a>
     </span>
-    <span>ブログ一覧</span>
+    <span>
+      <a href="./"><span>ブログ一覧</span></a>
+    </span>
+    <span>ブログ詳細</span>
   </div>
 </div>
 <!--ブログ-->
@@ -26,45 +29,47 @@
   <div class="blog-page__inner inner">
     <div class="blog-page__container blog-page-container">
       <div class="blog-page-container__left">
-        <div class="blog-page-container__cards blog-page-cards">
-          <!-- ループ処理開始 -->
-          <?php if (have_posts()):
-      while (have_posts()): the_post(); ?>
-          <a href="<?php the_permalink(); ?>" class="blog-cards__item-box blog-card">
-            <div class="blog-card__item">
-              <div class="blog-card__img">
-                <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像画像" />
-              </div>
-              <div class="blog-card__body">
-                <time class="blog-card__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m/d'); ?></time>
-                <h3 class="blog-card__text"><?php the_title(); ?></h3>
-                <p class="blog-card__text-sub">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </div>
-          </a>
-          <!-- ループ終了 -->
-          <?php endwhile; endif; ?>
-
+        <div class="blog-page-container__cards blog-cards-detail">
+          <div class="blog-cards-detail__title">
+            <time class="blog-cards-detail__date" datetime="2022-11-17">2023.11/17</time>
+            <h2 class="blog-cards-detail__text">ライセンス取得</h2>
+          </div>
+          <figure class="blog-cards-detail__item-box">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img2.jpg" alt="海底にカラフルなイソギンチャクが生えている様子" />
+          </figure>
+          <div class="blog-cards-detail__item-container">
+            <p>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            </p>
+            <figure>
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img2.jpg"
+                alt="海底にカラフルなイソギンチャクが生えている様子" />
+            </figure>
+            <p>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            </p>
+            <ul>
+              <li>リスト１</li>
+              <li>リスト２</li>
+              <li>リスト３</li>
+            </ul>
+            <p>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            </p>
+          </div>
         </div>
-        <div class="pagination-blog pagination-blog-top">
-          <div class="pagination-blog__inner inner">
-            <div class="pagination-blog__nav">
-              <a class="pagination-blog__prev" href="#"></a>
-              <span class="pagination-blog__current">1</span>
-              <a class="pagination__larger" href="#">2</a>
-              <a class="pagination__larger" href="#">3</a>
-              <a class="pagination__larger" href="#">4</a>
-              <a class="pagination__larger md-none" href="#">5</a>
-              <a class="pagination__larger md-none" href="#">6</a>
-              <a class="pagination-blog__next" href="#"></a>
+        <div class="blog-page-detail__pagination blog-page-detail-pagination-top pagination-detail">
+          <div class="pagination-detail__inner inner">
+            <div class="pagination-detail__nav">
+              <a class="pagination-detail__prev" href="#"></a>
+              <a class="pagination-detail__next" href="#"></a>
             </div>
           </div>
         </div>
       </div>
-      <div class="blog-page-container__right">
-        <div class="blog-page-container__heading blog-heading blog-heading-top">
-          <div class="blog-heading__inner">
+      <div class="blog-page-detail__container-right">
+        <div class="blog-page-detail__heading blog-page-detail-heading-top blog-detail-heading">
+          <div class="blog-detail-heading__inner blog-heading">
             <div class="blog-heading__container">
               <div class="blog-heading__title-box">
                 <div class="blog-heading__icon">
@@ -227,9 +232,8 @@
     </div>
   </div>
 </section>
-
 <!--コンタクト-->
-<section class="contact contact-about-top">
+<section class="contact contact-detail-top">
   <div class="contact__inner inner">
     <div class="contact__container">
       <div class="contact__box contact-box">
