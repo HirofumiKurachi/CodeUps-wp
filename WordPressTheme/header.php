@@ -26,7 +26,8 @@
             <a class="header__link" href="aboutus-page.html"><span>About us</span>私たちについて</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="information-page.html"><span>Information</span>ダイビング情報</a>
+            <a class="header__link"
+              href="<?php echo esc_url(home_url('/')); ?>information"><span>Information</span>ダイビング情報</a>
           </li>
           <li class="header__item">
             <a class="header__link" href="<?php echo esc_url(home_url('/')); ?>blog"><span>Blog</span>ブログ</a>
