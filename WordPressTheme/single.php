@@ -30,9 +30,13 @@
     <div class="blog-page__container blog-page-container">
       <div class="blog-page-container__left">
         <div class="blog-page-container__cards blog-cards-detail">
+          <?php if (have_posts()):
+      while (have_posts()):
+       the_post(); ?>
+
           <div class="blog-cards-detail__title">
-            <time class="blog-cards-detail__date" datetime="2022-11-17">2023.11/17</time>
-            <h2 class="blog-cards-detail__text">ライセンス取得</h2>
+            <time class="blog-cards-detail__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m/d'); ?></time>
+            <h2 class="blog-cards-detail__text"><?php the_title(); ?></h2>
           </div>
           <figure class="blog-cards-detail__item-box">
             <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img2.jpg" alt="海底にカラフルなイソギンチャクが生えている様子" />
@@ -57,6 +61,7 @@
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
             </p>
           </div>
+          <?php endwhile; endif; ?>
         </div>
         <div class="blog-page-detail__pagination blog-page-detail-pagination-top pagination-detail">
           <div class="pagination-detail__inner inner">
