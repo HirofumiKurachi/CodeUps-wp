@@ -34,9 +34,9 @@
             <time class="blog-cards-detail__date" datetime="2022-11-17">2023.11/17</time>
             <h2 class="blog-cards-detail__text">ライセンス取得</h2>
           </div>
-          <div class="blog-cards-detail__item-box">
+          <figure class="blog-cards-detail__item-box">
             <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img2.jpg" alt="海底にカラフルなイソギンチャクが生えている様子" />
-          </div>
+          </figure>
           <div class="blog-cards-detail__item-container">
             <p>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
