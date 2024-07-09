@@ -699,6 +699,10 @@ a {
 	width: 100%;
 }
 
+.blog-cards-detail__item-box {
+	margin-top: 1.5rem;
+}
+
 .blog-cards {
 	grid-column-gap: 2.5rem;
 	grid-row-gap: 2.5rem;
@@ -4572,6 +4576,10 @@ html {
 
 .blog-cards-detail__item-container figure:not(:first-child) {
 	margin-top: 2.4375rem;
+}
+
+.blog-cards-detail__item-box {
+	margin-top: 2.5rem;
 }
 
 .blog-cards {
