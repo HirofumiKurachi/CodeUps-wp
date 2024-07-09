@@ -6,11 +6,9 @@
   }
 }
 
-
 .blog-cards-detail:hover {
   cursor: pointer;
 }
-
 
 .blog-cards-detail__text {
   font-size: rem(24);
@@ -29,15 +27,12 @@
   }
 }
 
-
 .blog-cards-detail__date {
   font-size: rem(14);
   font-weight: $normal;
   line-height: 1.5;
   font-family: Gotu;
 }
-
-
 
 .blog-cards-detail__item-container ul {
   margin-top: rem(24);
@@ -47,7 +42,6 @@
     margin-top: rem(40);
   }
 }
-
 
 .blog-cards-detail__item-container li::before {
   background-image: url(./../images/detail-logo.svg);
@@ -67,7 +61,7 @@
 
 .blog-cards-detail__item-container li {
   font-size: rem(16);
-  line-height: calc(24/16);
+  line-height: calc(24 / 16);
   font-family: "Noto Sans JP", serif;
 }
 
@@ -78,7 +72,6 @@
 .blog-cards-detail__item-container:hover {
   cursor: pointer;
 }
-
 
 .blog-cards-detail__item-container__text {
   font-size: rem(24);
@@ -109,7 +102,6 @@
     margin-top: rem(40);
   }
 }
-
 
 .blog-cards-detail__item-container figure {
   overflow: hidden;

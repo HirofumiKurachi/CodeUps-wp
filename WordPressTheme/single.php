@@ -24,6 +24,12 @@
     <span>ブログ詳細</span>
   </div>
 </div>
+
+<?php if (have_posts()):
+      while (have_posts()):
+       the_post(); ?>
+
+
 <!--ブログ-->
 <section class="blog-page blog-page-top">
   <div class="blog-page__inner inner">
@@ -31,19 +37,18 @@
       <div class="blog-page-container__left">
         <div class="blog-page-container__cards blog-cards-detail">
           <div class="blog-cards-detail__title">
-            <time class="blog-cards-detail__date" datetime="2022-11-17">2023.11/17</time>
-            <h2 class="blog-cards-detail__text">ライセンス取得</h2>
+            <time class="blog-cards-detail__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m/d'); ?></time>
+            <h2 class="blog-cards-detail__text"><?php the_title(); ?></h2>
           </div>
-          <figure class="blog-cards-detail__item-box">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img2.jpg" alt="海底にカラフルなイソギンチャクが生えている様子" />
-          </figure>
+          <div class="blog-cards-detail__item-box">
+            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像画像" />
+          </div>
           <div class="blog-cards-detail__item-container">
             <p>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
             </p>
             <figure>
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog-img2.jpg"
-                alt="海底にカラフルなイソギンチャクが生えている様子" />
+              <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像画像" />
             </figure>
             <p>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
@@ -232,6 +237,7 @@
     </div>
   </div>
 </section>
+<?php endwhile; endif; ?>
 <!--コンタクト-->
 <section class="contact contact-detail-top">
   <div class="contact__inner inner">
