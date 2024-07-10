@@ -88,4 +88,35 @@ add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles_and_scripts');
         );
     }
     add_action('after_setup_theme', 'my_setup');
+
+    // 投稿の名称を「ブログ」に変更
+    function change_post_label() {
+        global $menu;
+        global $submenu;
+        $menu[5][0] = 'ブログ';
+        $submenu['edit.php'][5][0] = 'ブログ';
+        $submenu['edit.php'][10][0] = '新規ブログ';
+        $submenu['edit.php'][16][0] = 'タグ';
+    }
+    function change_post_object_label() {
+        global $wp_post_types;
+        $labels = &$wp_post_types['post']->labels;
+        $labels->name = 'ブログ';
+        $labels->singular_name = 'ブログ';
+        $labels->add_new = '新規追加';
+        $labels->add_new_item = '新規ブログを追加';
+        $labels->edit_item = 'ブログの編集';
+        $labels->new_item = '新規ブログ';
+        $labels->view_item = 'ブログを表示';
+        $labels->search_items = 'ブログを検索';
+        $labels->not_found = 'ブログが見つかりませんでした';
+        $labels->not_found_in_trash = 'ゴミ箱にブログはありません';
+        $labels->all_items = 'ブログ一覧';
+        $labels->menu_name = 'ブログ';
+        $labels->name_admin_bar = 'ブログ';
+    }
+
+    add_action( 'admin_menu', 'change_post_label' );
+    add_action( 'init', 'change_post_object_label' );
+
 ?>
