@@ -40,9 +40,9 @@
             <time class="blog-cards-detail__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m/d'); ?></time>
             <h2 class="blog-cards-detail__text"><?php the_title(); ?></h2>
           </div>
-          <div class="blog-cards-detail__item-box">
+          <figure class="blog-cards-detail__item-box">
             <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像画像" />
-          </div>
+          </figure>
           <div class="blog-cards-detail__item-container">
             <p>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
