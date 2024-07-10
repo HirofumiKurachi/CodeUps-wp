@@ -41,14 +41,22 @@
             <h2 class="blog-cards-detail__text"><?php the_title(); ?></h2>
           </div>
           <figure class="blog-cards-detail__item-box">
+            <?php if(get_the_post_thumbnail()): ?>
             <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像画像" />
+            <?php else: ?>
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/noimage.jpg" alt="noimage">
+            <?php endif; ?>
           </figure>
           <div class="blog-cards-detail__item-container">
             <p>
               <?php the_content(); ?>
             </p>
             <figure>
+              <?php if(get_the_post_thumbnail()): ?>
               <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像画像" />
+              <?php else: ?>
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/noimage.jpg" alt="noimage">
+              <?php endif; ?>
             </figure>
             <p>
               <?php the_content(); ?>
