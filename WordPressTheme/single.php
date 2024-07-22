@@ -74,8 +74,23 @@
         <div class="blog-page-detail__pagination blog-page-detail-pagination-top pagination-detail">
           <div class="pagination-detail__inner inner">
             <div class="pagination-detail__nav">
-              <a class="pagination-detail__prev" href="#"></a>
-              <a class="pagination-detail__next" href="#"></a>
+              <?php
+          $prev = get_previous_post();
+          if ( ! empty( $prev ) ) {
+            $prev_url = esc_url( get_permalink( $prev->ID ) );
+          }
+
+          $next = get_next_post();
+          if ( ! empty( $next ) ) {
+            $next_url = esc_url( get_permalink( $next->ID ) );
+          }
+        ?>
+              <?php if ( ! empty( $prev ) ) : ?>
+              <a class="pagination-detail__prev" href="<?php echo $prev_url; ?>"></a>
+              <?php endif; ?>
+              <?php if ( ! empty( $next ) ) : ?>
+              <a class="pagination-detail__next" href="<?php echo $next_url; ?>"></a>
+              <?php endif; ?>
             </div>
           </div>
         </div>
