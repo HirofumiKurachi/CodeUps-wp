@@ -50,7 +50,14 @@
         <div class="pagination-blog pagination-blog-top">
           <div class="pagination-blog__inner inner">
             <div class="pagination-blog__nav">
-              <?php wp_pagenavi(); ?>
+              <a class="pagination-blog__prev" href="#"></a>
+              <span class="pagination-blog__current">1</span>
+              <a class="pagination__larger" href="#">2</a>
+              <a class="pagination__larger" href="#">3</a>
+              <a class="pagination__larger" href="#">4</a>
+              <a class="pagination__larger md-none" href="#">5</a>
+              <a class="pagination__larger md-none" href="#">6</a>
+              <a class="pagination-blog__next" href="#"></a>
             </div>
           </div>
         </div>
